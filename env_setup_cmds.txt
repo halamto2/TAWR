@@ -1,0 +1,18 @@
+conda create --name TAWR python=3.8 -y
+conda activate TAWR
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+pip install -U openmim
+mim install mmcv-full
+pip install mmsegmentation
+conda install scipy matplotlib progress scikit-image==0.17.2 tensorboardX scikit-learn conda-build
+
+pip install -U albumentations --no-binary qudida,albumentations
+pip install ninja
+
+conda install -c conda-forge timm
+
+git clone https://github.com/bcmi/SLBR-Visible-Watermark-Removal.git external_repos/SLBR
+git clone https://github.com/fenglinglwb/MAT.git external_repos/MAT
+git clone https://github.com/whai362/PVT external_repos/PVT
+
+conda-develop . && conda-develop ./external_repos/ && conda-develop ./external_repos/MAT && conda-develop ./external_repos/SLBR
