@@ -59,6 +59,9 @@ conda activate TAWR
 ```
 Then, navigate to the project directory and run the desired script.
 
+### Dataset
+The training CLWD dataset can be obtained through the [WDnet's repository](https://github.com/MRUIL/WDNet). 
+
 ## Results
 The results of the project are documented in the thesis text, which will be linked here once it becomes available.
 
